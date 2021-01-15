@@ -1,0 +1,1 @@
+<footer class="footer text-center">Sistem Informasi Pengolahan Data Nilai Berbasis Website Pada SMKN 1 Balai.</footer>

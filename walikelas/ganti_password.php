@@ -1,0 +1,1 @@
+<?php include '../admin/ganti_password.php'; ?>
