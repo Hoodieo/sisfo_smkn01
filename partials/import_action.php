@@ -2,7 +2,6 @@
 error_reporting(0);
   // Jika user telah mengklik tombol Preview
   if(isset($_POST['preview'])){
-
     if ($_FILES['file']['error']==4) {
       // tidak ada file yg dipilih
       echo "<div class='alert alert-danger' id='kosong'>Upload file terlebih dahulu</div>";
@@ -23,9 +22,6 @@ error_reporting(0);
     // Cek apakah file yang diupload adalah file Excel 2007 (.xlsx)
     if($tipe_file == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" || $tipe_file == "application/wps-office.xlsx"){
       // Upload file yang dipilih ke folder tmp
-      // dan rename file tersebut menjadi data{ip_address}.xlsx
-      // {ip_address} diganti jadi ip address user yang ada di variabel $ip
-      // Contoh nama file setelah di rename : data127.0.0.1.xlsx
       move_uploaded_file($tmp_file, '../tmp/'.$nama_file_baru);
       
       // Load librari PHPExcel nya

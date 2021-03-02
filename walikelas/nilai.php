@@ -50,6 +50,7 @@
 
                                         <td>
                                             <a href="index?m=nilai_mapel&id_kelas=<?= $mapel->id_kelas ?>&id_mapel=<?= $mapel->id_mapel ?>&id_guru=<?= $mapel->id_guru ?>" class="btn btn-secondary btn-sm">Lihat</a>
+                                            <a href="index?m=import_nilai&id_kelas=<?= $mapel->id_kelas ?>&id_mapel=<?= $mapel->id_mapel ?>&id_guru=<?= $mapel->id_guru ?>" class="btn btn-success text-white btn-sm">Import</a>
                                         </td>
                                         
                                     </tr>

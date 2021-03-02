@@ -221,6 +221,7 @@ elseif ($mod=='siswa_tambah') {
 	$nama_ortu = ucwords($_POST['nama_ortu']);
 	$id_kelas = $_POST['id_kelas'];
 	$keterangan = $_POST['keterangan'];
+	$nisn_pass = substr($nisn, -4);
 	
 	$username = str_replace(' ', '_', strtolower($nama_siswa));
 
@@ -231,7 +232,7 @@ elseif ($mod=='siswa_tambah') {
 		$db->query("INSERT INTO tbl_siswa(id_siswa, nama_siswa, nis, nisn, tmp_lahir, tgl_lahir, jenis_kelamin, agama, nama_ortu, id_kelas, keterangan) VALUES ($id,'$nama_siswa','$nis','$nisn','$tmp_lahir','$tgl_lahir','$jenis_kelamin','$agama','$nama_ortu',$id_kelas,'$keterangan')");
 
 		// tambah hak akses (tbl_pengguna)
-		$db->query("INSERT INTO tbl_pengguna(id, username, password, status) VALUES ($id, '$id', '12345', 'siswa')");
+		$db->query("INSERT INTO tbl_pengguna(id, username, password, status) VALUES ($id, '$nisn', '$nisn_pass', 'siswa')");
 
 		echo "<script>alert('Data berhasil disimpan')</script>";
 		redirect_js("index?m=siswa");

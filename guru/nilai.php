@@ -1,4 +1,4 @@
- <div class="page-breadcrumb bg-white my-2">
+<div class="page-breadcrumb bg-white my-2">
     <div class="row align-items-center">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
             <h4 class="page-title text-uppercase font-medium font-14">Data Nilai Per Mata Pelajaran</h4>
@@ -50,6 +50,7 @@
 
                                         <td>
                                             <a href="index?m=nilai_mapel&id_kelas=<?= $mapel->id_kelas ?>&id_mapel=<?= $mapel->id_mapel ?>&id_guru=<?= $mapel->id_guru ?>" class="btn btn-secondary btn-sm">Lihat</a>
+                                            <a href="index?m=import_nilai&id_kelas=<?= $mapel->id_kelas ?>&id_mapel=<?= $mapel->id_mapel ?>&id_guru=<?= $mapel->id_guru ?>" class="btn btn-success text-white btn-sm">Import</a>
                                         </td>
                                         
                                     </tr>
